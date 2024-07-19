@@ -55,7 +55,7 @@ To avoid package inconsistancies, it's preferred to work in a docker container. 
             ```bash
             docker run --gpus all -v C:\\Users\\...\\PATH_TO_THE_PROJECT\\..\\T5-Text-to-Text-Transfer-Transformer-:/X4 --name X4 -it my_pytorch_python:3.10.9
             ```
-        ![run_docker](run_docker.png)
+        ![run_docker](https://github.com/sulaiman-shamasna/T5-Text-to-Text-Transfer-Transformer-/blob/main/images/run_docker.png)
 3. Install dependencies inside the container once it is running.
     ```bash
     pip install -r requirements.txt
@@ -65,7 +65,6 @@ To avoid package inconsistancies, it's preferred to work in a docker container. 
     pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/nightly/cu121
     ```
 Be aware here and avoid packages as well as available cuda version and nvidia driver inconsistancies, pleas run the command in the bas ```nvidia-smi```, and check these details:
-
 
     +-----------------------------------------------------------------------------------------+
     | NVIDIA-SMI 560.27                 Driver Version: 560.70         CUDA Version: 12.6     |
@@ -86,7 +85,6 @@ Be aware here and avoid packages as well as available cuda version and nvidia dr
     |=========================================================================================|
     |  No running processes found                                                             |
     +-----------------------------------------------------------------------------------------+
-    
 
 
 ### ***Local Environment***
@@ -189,28 +187,3 @@ Be aware here and avoid packages as well as available cuda version and nvidia dr
 
 Congratulations! You've just finished finetuning T5 model.
 
-```bash
-+-----------------------------------------------------------------------------------------+
-| NVIDIA-SMI 560.27                 Driver Version: 560.70         CUDA Version: 12.6     |
-|-----------------------------------------+------------------------+----------------------+
-| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
-| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
-|                                         |                        |               MIG M. |
-|=========================================+========================+======================|
-|   0  NVIDIA GeForce RTX 4090 ...    On  |   00000000:01:00.0 Off |                  N/A |
-| N/A   77C    P0            104W /  150W |   16032MiB /  16376MiB |    100%      Default |
-|                                         |                        |                  N/A |
-+-----------------------------------------+------------------------+----------------------+
-
-+-----------------------------------------------------------------------------------------+
-| Processes:                                                                              |
-|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
-|        ID   ID                                                               Usage      |
-|=========================================================================================|
-|  No running processes found                                                             |
-+-----------------------------------------------------------------------------------------+
-```
-
-```bash
-pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/nightly/cu121
-```
